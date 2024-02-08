@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Zeus Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Zeus Quiz</h1>
+
+<form id="zeusQuiz">
+
+    <div class="question">
+        <label for="question1">1. Who are Zeus's parents?</label>
+        <select id="question1">
+            <option value="">Select an answer</option>
+            <option value="a">Hera and Poseidon</option>
+            <option value="b">Cronus and Rhea</option>
+            <option value="c">Ares and Aphrodite</option>
+            <option value="d">Demeter and Hades</option>
+        </select>
+    </div>
+
+    <div class="question">
+        <label for="question2">2. What is Zeus's symbol?</label>
+        <select id="question2">
+            <option value="">Select an answer</option>
+            <option value="a">Trident</option>
+            <option value="b">Harp</option>
+            <option value="c">Lightning Bolt</option>
+            <option value="d">Bow and Arrow</option>
+        </select>
+    </div>
+
+    <div class="question">
+        <label for="question3">3. Where does Zeus reside?</label>
+        <select id="question3">
+            <option value="">Select an answer</option>
+            <option value="a">Underworld</option>
+            <option value="b">Mount Olympus</option>
+            <option value="c">Sea</option>
+            <option value="d">Athens</option>
+        </select>
+    </div>
+
+    <div class="question">
+        <label for="question4">4. What is Zeus the god of?</label>
+        <select id="question4">
+            <option value="">Select an answer</option>
+            <option value="a">War</option>
+            <option value="b">Love</option>
+            <option value="c">Sky and Thunder</option>
+            <option value="d">Wine</option>
+        </select>
+    </div>
+
+    <div class="question">
+        <label for="question5">5. Which animal is considered sacred to Zeus?</label>
+        <select id="question5">
+            <option value="">Select an answer</option>
+            <option value="a">Cat</option>
+            <option value="b">Eagle</option>
+            <option value="c">Dolphin</option>
+            <option value="d">Horse</option>
+        </select>
+    </div>
+
+    <button type="button" onclick="checkAnswers()">Submit Answers</button>
+
+</form>
+
+<script>
+    function checkAnswers() {
+        var score = 0;
+        if (document.getElementById("question1").value == "b") score++;
+        if (document.getElementById("question2").value == "c") score++;
+        if (document.getElementById("question3").value == "b") score++;
+        if (document.getElementById("question4").value == "c") score++;
+        if (document.getElementById("question5").value == "b") score++;
+
+        alert("Your score is: " + score + "/5");
+    }
+</script>
+
+</body>
+</html>
